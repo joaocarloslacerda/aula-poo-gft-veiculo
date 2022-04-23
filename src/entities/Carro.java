@@ -6,12 +6,14 @@ public class Carro extends Veiculo{
 	Double gasolineValue;
 	
 	//definindo construtor padrão
+	//construtor está como public para que seja enchergado pela classe Main
 	Carro(){
 		super();
 	}
 	
 	//definindo construtor customizado, sendo recebido atraves dele os atributos herdados da 
 	//classe Veiculo a cor, modelo e capacidade do tanque, além do atributo desta própria classe 
+	//construtor está como public para que seja enchergado pela classe Main
 	public Carro(String color, String model, Double tankCapacity, Double gasolineValue){
 		//atribuindo herdados da classe veiculo
 		super(color, model, tankCapacity);
@@ -43,7 +45,7 @@ public class Carro extends Veiculo{
 	
 	//método toString utilizado para formatar e printar os dados
 	public String toString() {
-		return "The color of the car is " + color + "\n"
+		return "\n" + "The color of the car is " + color + "\n"
 				+ "The model os the car is " + model + "\n"
 				+ "Gas tank capacity is " + tankCapacity + " liter" + "\n"
 				+ String.format("The value of the liter gasoline is R$%.2f", gasolineValue) + "\n"

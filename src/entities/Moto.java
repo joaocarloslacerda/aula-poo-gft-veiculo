@@ -6,13 +6,15 @@ public class Moto extends Veiculo {
 	Double gasolineValue;
 	
 	//definindo construtor padrão
-	Moto(){
+	//construtor está como public para que seja enchergado pela classe Main
+	public Moto(){
 		super();
 	}
 	
 	//definindo construtor customizado, sendo recebido atraves dele os atributos herdados da 
 	//classe Veiculo a cor, modelo e capacidade do tanque, além do atributo desta própria classe
-	Moto(String color, String model, Double tankCapacity, Double gasolineValue){
+	//construtor está como public para que seja enchergado pela classe Main
+	public Moto(String color, String model, Double tankCapacity, Double gasolineValue){
 		//atributos herdados da classe Veiculo
 		super(color, model, tankCapacity);
 		//passando para o atributo desta classe o dado contido no atributo recebido por parâmetro
@@ -43,7 +45,10 @@ public class Moto extends Veiculo {
 	
 	//método toString utilizado para formatar e printar os dados
 	public String toString() {
-		return;
+		return "\n" + "The color of the motorcycle is " + color + "\n"
+				+ "The model of the motorcycle is " + model + "\n"
+				+ "Gas tank capacity is " + tankCapacity + "\n"
+				+ String.format("The value of the litter gasoline is R$%.2f ", gasolineValue) + "\n"
+				+ String.format("The total amount to fill gasoline is R$%.2f ", totalFuelValue());
 	}
-
 }
