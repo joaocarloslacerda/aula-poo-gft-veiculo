@@ -10,11 +10,12 @@ public class Carro extends Veiculo{
 		super();
 	}
 	
-	//definindo construtor customizado, sendo recebido atraves dele a cor, modelo e capacidade do tanque do carro
+	//definindo construtor customizado, sendo recebido atraves dele os atributos herdados da 
+	//classe Veiculo a cor, modelo e capacidade do tanque, além do atributo desta própria classe 
 	public Carro(String color, String model, Double tankCapacity, Double gasolineValue){
 		//atribuindo herdados da classe veiculo
 		super(color, model, tankCapacity);
-		//passando para o atributo da classe o dado contido no atributo recebido por parâmetro
+		//passando para o atributo desta classe o dado contido no atributo recebido por parâmetro
 		this.gasolineValue = gasolineValue;
 	}
 		
@@ -33,7 +34,7 @@ public class Carro extends Veiculo{
 	//método para calcular o valor total para encher um tanque de gasolina
 	public Double totalFuelValue() {
 		
-		//calculando o valor total para encher um tanque de gasoline
+		//calculando o valor total para encher um tanque de combustível com base no valor do combustível
 		double totalValue = gasolineValue * tankCapacity;
 		
 		//retornando o valor total para encher um tanque de gasolina
