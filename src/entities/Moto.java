@@ -22,12 +22,12 @@ public class Moto extends Veiculo {
 	}
 	
 	//retornando dado contido no atributo gasoline_value
-	public double getGasolineValue() {
+	public Double getGasolineValue() {
 		return gasolineValue;
 	}
 	
-	//alterando o valor da gasolina contida no atributo gasolineValue
-	public void setGasolineValue(double gasolineValue) {
+	//alterando o dado contido no atributo da classe para o dado contido no atributo passado por parâmetro
+	public void setGasolineValue(Double gasolineValue) {
 		this.gasolineValue = gasolineValue;
 	}
 	
@@ -47,7 +47,7 @@ public class Moto extends Veiculo {
 	public String toString() {
 		return "\n" + "The color of the motorcycle is " + color + "\n"
 				+ "The model of the motorcycle is " + model + "\n"
-				+ "Gas tank capacity is " + tankCapacity + "\n"
+				+ "Fuel tank capacity is " + tankCapacity + "\n"
 				+ String.format("The value of the litter gasoline is R$%.2f ", gasolineValue) + "\n"
 				+ String.format("The total amount to fill gasoline is R$%.2f ", totalFuelValue());
 	}

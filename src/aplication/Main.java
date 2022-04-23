@@ -7,6 +7,8 @@ import java.util.Scanner;
 import entities.Carro;
 //importando a classe Moto
 import entities.Moto;
+//importando a classe Caminhao
+import entities.Caminhao;
 
 public class Main {
 
@@ -36,12 +38,13 @@ public class Main {
 		System.out.println("Tell the tank capacity fuel:");
 		//instandiando o atributo tankCapacity e passando para ele o dado digitado pelo usuário
 		Double tankCapacity = sc.nextDouble();
-				
+		
+		//se o caracter contido no atributo op for 'c' de Car entre neste if
 		if(op == 'c') {
 			//solicitando que o usuário informe o preço da gasolina
 			System.out.println("Tell the price gasoline:");
 			//inicializando o atributo gasolineValue e passando o dado digita pelo usuário
-			double gasolineValue = sc.nextFloat();
+			Double gasolineValue = sc.nextDouble();
 			
 			//instanciando e inicializando um novo objeto car do tipo Carro, e passando um new Carro com os parâmetros color, model e tankCapacity
 			Carro car = new Carro(color, model, tankCapacity, gasolineValue);
@@ -49,14 +52,25 @@ public class Main {
 			//chamando método toString para mostrar os dados conforme formatação contida no método
 			System.out.println(car.toString());
 		}
-		/*else if(op == 't') {
+		//se o caracter contido no atributo op for 't' de Truck entre neste else if
+		else if(op == 't') {
+			//solicitando que o usuário informe o preço da gasolina
+			System.out.println("Tell the price diesel:");
+			//inicializando o atributo gasolineValue e passando o dado digita pelo usuário
+			Double dieselValue = sc.nextDouble();
 			
-		}*/
+			//instanciando e inicializando um novo objeto truck do tipo Caminhao, e passando um new Caminhao com os parâmetros color, model e tankCapacity
+			Caminhao truck = new Caminhao(color, model, tankCapacity, dieselValue);
+			
+			//chamando método toString para mostrar os dados conforme formatação contida no método
+			System.out.println(truck.toString());
+		}
+		//se o caracter contido no atributo op for 'm' de MotorCycle entre neste else if
 		else if(op == 'm') {
 			//solicitando que o usuário informe o preço da gasolina
 			System.out.println("Tell the price gasoline:");
 			//inicializando o atributo gasolineValue e passando o dado digita pelo usuário
-			double gasolineValue = sc.nextFloat();
+			Double gasolineValue = sc.nextDouble();
 			
 			//instanciando e inicializando um novo objeto motorCycle do tipo Moto, e passando um new Moto com os parâmetros color, model e tankCapacity
 			Moto motorCycle = new Moto(color, model, tankCapacity, gasolineValue);
@@ -64,10 +78,7 @@ public class Main {
 			//chamando método toString para mostrar os dados conforme formatação contida no método
 			System.out.println(motorCycle.toString());
 		}
-		
-		
-		//***********implementar opção para caminhão
-		
+
 		//encerrando o objeto sc
 		sc.close();
 	}

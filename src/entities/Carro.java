@@ -22,12 +22,12 @@ public class Carro extends Veiculo{
 	}
 		
 	//retornando dado contido no atributo gasoline_value
-	public double getGasolineValue() {
+	public Double getGasolineValue() {
 		return gasolineValue;
 	}
 	
-	//alterando o valor da gasolina contida no atributo gasolineValue
-	public void setGasolineValue(double gasolineValue) {
+	//alterando o dado contido no atributo da classe para o dado contido no atributo passado por parâmetro
+	public void setGasolineValue(Double gasolineValue) {
 		this.gasolineValue = gasolineValue;
 	}
 	
@@ -37,7 +37,7 @@ public class Carro extends Veiculo{
 	public Double totalFuelValue() {
 		
 		//calculando o valor total para encher um tanque de combustível com base no valor do combustível
-		double totalValue = gasolineValue * tankCapacity;
+		Double totalValue = gasolineValue * tankCapacity;
 		
 		//retornando o valor total para encher um tanque de gasolina
 		return totalValue;
@@ -47,7 +47,7 @@ public class Carro extends Veiculo{
 	public String toString() {
 		return "\n" + "The color of the car is " + color + "\n"
 				+ "The model os the car is " + model + "\n"
-				+ "Gas tank capacity is " + tankCapacity + " liter" + "\n"
+				+ "Fuel tank capacity is " + tankCapacity + " liter" + "\n"
 				+ String.format("The value of the liter gasoline is R$%.2f", gasolineValue) + "\n"
 				+ String.format("The total amount to fill gasoline tank is R$%.2f", totalFuelValue());
 	}
